@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0f19;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+#contenedorPrincipal{
+    display: flex;
+    justify-content: center;
+    margin: 80px 100px 5px 250px;
+    padding: 100px 100px;
+    border: 2px solid #00d2ff;
+    background-color: rgba(0, 0, 0, 0.856);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 
+        0 0 10px #00d2ff,
+        0 0 20px #0066ff,
+        inset 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+#cotizador{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dinero{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #00d2ff,
+        0 0 40px #0066ff,
+        0 0 80px #0022ff;
+}
+
+.titulo{
+    text-align: left;
+    margin: 10px;
+}
+
+.contenedorInput{
+    border-radius: 10px;
+}
+
+#selectorCripto, #selectorMoneda, #Monto{
+    border-radius: 20px;
+    padding: 5px 200px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border-color: #00d2ff;
+    background-color: #000000;
+
+} 
+
+.usuarioInput{
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin: 0px 150px;
+    background-color: #0b111e; 
+    color: #00d2ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #00d2ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 4px rgba(0, 210, 255, 0.6);
+    box-shadow: 
+        0 0 10px rgba(0, 210, 255, 0.3),
+        inset 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.usuarioInput:hover {
+    color: #fff;
+    background-color: #00d2ff;
+    
+    box-shadow: 
+        0 0 15px #00d2ff,
+        0 0 30px #0066ff,
+        0 0 45px #0022ff;
+        
+    text-shadow: 0 0 5px #fff; 
+    
+
+    transform: translateY(-2px);
+}
+
+
+.usuarioInput:active {
+    transform: translateY(1px);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#informacion{
+    margin: 10px 120px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.loader {
+  width: 48px;
+    height: 48px;
+    border: 3px solid transparent;
+    border-top: 3px solid #00d2ff;
+    border-bottom: 3px solid #0066ff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+    filter: drop-shadow(0 0 8px #00d2ff);
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 12px solid;
+  border-color: transparent #FF3D00 #FF3D00 transparent;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.crypto-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 150px;
+  height: 100vh;
+}
+
+.coin {
+  font-size: 300px;
+  width: 320px;
+  height: 320px;
+  background: #f7931a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 0 0 20px rgba(247, 147, 26, 0.5);
+  animation: spin-coin 2s linear infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin-coin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.superContenedor{
+    display: flex;
+    justify-content: space-between;
+}
+
+.crypto-loader p {
+    font-size: 40px;
+    background-color: #0b111e; 
+    color: #00d2ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #00d2ff;
+    box-shadow: 
+        0 0 10px #00d2ff,
+        0 0 20px #0066ff,
+        inset 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+
+@media (max-width: 600px) {
+
+.crypto-loader{
+    display: none;
+}
+
+#contenedorPrincipal{
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    padding: 10px 10px;
+    border: 2px solid #00d2ff;
+    background-color: rgba(0, 0, 0, 0.856);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 
+        0 0 10px #00d2ff,
+        0 0 20px #0066ff,
+        inset 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+#cotizador{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.dinero{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #00d2ff,
+        0 0 40px #0066ff,
+        0 0 80px #0022ff;
+}
+
+.titulo{
+    text-align: left;
+    margin: 10px;
+}
+
+.contenedorInput{
+    border-radius: 10px;
+}
+
+#selectorCripto, #selectorMoneda, #Monto{
+    border-radius: 20px;
+    padding: 5px 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    border-color: #00d2ff;
+    background-color: #000000;
+    margin-left: 10px;
+} 
+
+.usuarioInput{
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin: 0px 10px;
+    background-color: #0b111e; 
+    color: #00d2ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #00d2ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 4px rgba(0, 210, 255, 0.6);
+    box-shadow: 
+        0 0 10px rgba(0, 210, 255, 0.3),
+        inset 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+}
+
+@media (min-width: 768px) {
+
+#contenedorPrincipal{
+    max-width: 90%;
+    padding: 20px
+}
+
+}
